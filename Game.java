@@ -4,9 +4,10 @@ import javax.swing.*;
 public class Game{
     JFrame window;
     Container con;
-    JPanel titleNamePanel;
+    JPanel titleNamePanel , startButtonPanel;
     JLabel titleNameLabel;
     Font titleFont = new Font("Times New Roman", Font.PLAIN,90);
+    JButton startButton;
     public static void main(String[] args) {
         new Game();
     }
@@ -21,11 +22,23 @@ public class Game{
 
         titleNamePanel = new JPanel();
         titleNamePanel.setBounds(100,100,600,150);
-        titleNamePanel.setBackground(Color.BLUE);
+        titleNamePanel.setBackground(Color.BLACK);
         titleNameLabel = new JLabel("ADVENTURE");
         titleNameLabel.setForeground(Color.WHITE);
-        titleNamePanel.add(titleNameLabel);
         titleNameLabel.setFont(titleFont);
+
+        startButtonPanel = new JPanel();
+        startButtonPanel.setBounds(300,400,200,100);
+        startButtonPanel.setBackground(Color.blue);
+
+        startButton = new JButton("START");
+        startButton.setBackground(Color.black);
+        startButton.setForeground(Color.white);
+        
+        
+        titleNamePanel.add(titleNameLabel);
+        startButtonPanel.add(startButton);
         con.add(titleNamePanel);
+        con.add(startButtonPanel);
     }
 }
